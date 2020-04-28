@@ -22,6 +22,12 @@ class _FlutterLayoutGroupState extends State<FlutterLayoutGroup> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('如何进行Flutter布局开发？'),
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(Icons.arrow_back),
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: _currentIndex,
