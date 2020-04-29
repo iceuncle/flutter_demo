@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/plugin_use.dart';
+import 'package:my_app/res_page.dart';
 import 'package:my_app/statefull_group_page.dart';
 import 'package:my_app/statefull_layout_page.dart';
 
 import 'gesture_page.dart';
+import 'lanuch_page.dart';
 import 'less_group_page.dart';
 
 void main() => runApp(MyApp());
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
           'ful': (BuildContext context) => StatefulGroup(),
           'layout': (BuildContext context) => FlutterLayoutGroup(),
           'gesture': (BuildContext context) => GesturePage(),
+          'res': (BuildContext context) => ResPage(),
+          'launch': (BuildContext context) => LaunchPage(),
         });
   }
 }
@@ -61,6 +65,8 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('StatefulWidget与基础组件', StatefulGroup(), 'ful'),
           _item('如何进行Flutter布局开发？', FlutterLayoutGroup(), 'layout'),
           _item('如何检测用户手势以及处理点击事件？', GesturePage(), 'gesture'),
+          _item('如何导入和使用Flutter的资源文件？', ResPage(), 'res'),
+          _item('如何打开第三方应用？', LaunchPage(), 'launch'),
         ],
       ),
     );
