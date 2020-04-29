@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/photo_app.dart';
 import 'package:my_app/plugin_use.dart';
 import 'package:my_app/res_page.dart';
 import 'package:my_app/statefull_group_page.dart';
@@ -62,6 +63,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'launch': (BuildContext context) => LaunchPage(),
           'widgetLifecycle': (BuildContext context) => WidgetLifecycle(),
           'appLifecycle': (BuildContext context) => AppLifecycle(),
+          'photo': (BuildContext context) => PhotoApp(),
         });
   }
 }
@@ -91,6 +93,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
                   byName = value;
                 });
               }),
+          _item('【实战尝鲜】拍照APP开发', PhotoApp(), 'photo'),
           _item('如何使用Flutter包和插件？', PluginUse(), 'plugin'),
           _item('StatelessWidget与基础组件', LessGroupPage(), 'less'),
           _item('StatefulWidget与基础组件', StatefulGroup(), 'ful'),

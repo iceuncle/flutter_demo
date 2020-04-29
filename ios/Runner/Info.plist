@@ -22,6 +22,12 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>在这里配置相机的使用说明</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>在这里配置录音的使用说明</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>在这里配置相册的使用说明</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
