@@ -10,20 +10,47 @@ import 'gesture_page.dart';
 import 'lanuch_page.dart';
 import 'less_group_page.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(DynamicTheme());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class DynamicTheme extends StatefulWidget {
+  @override
+  _DynamicThemeState createState() => _DynamicThemeState();
+}
+
+class _DynamicThemeState extends State<DynamicTheme> {
+  Brightness _brightness = Brightness.light;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
+//          fontFamily: 'RubikMonoOne', //将字体运用到全局
+          brightness: _brightness,
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
           appBar: AppBar(title: Text('如何创建和使用Flutter的路由与导航')),
-          body: RouteNavigator(),
+          body: Column(
+            children: <Widget>[
+              RaisedButton(
+                onPressed: () {
+                  setState(() {
+                    if (_brightness == Brightness.dark) {
+                      _brightness = Brightness.light;
+                    } else {
+                      _brightness = Brightness.dark;
+                    }
+                  });
+                },
+                child: Text(
+                  '切换主题abc',
+                  style: TextStyle(fontFamily: 'RubikMonoOne'),
+                ),
+              ),
+              RouteNavigator()
+            ],
+          ),
         ),
         routes: <String, WidgetBuilder>{
           'plugin': (BuildContext context) => PluginUse(),
