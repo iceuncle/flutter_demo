@@ -26,6 +26,9 @@ dependencies:
   flutter_color_plugin: ^0.0.2
   url_launcher: ^5.4.5
   image_picker: ^0.6.5
+  path_provider: ^1.6.7
+  transparent_image: ^1.0.0
+  cached_network_image: ^2.1.0+1
 
 dev_dependencies:
   flutter_test:

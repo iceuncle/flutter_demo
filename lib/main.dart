@@ -8,6 +8,7 @@ import 'package:my_app/statefull_layout_page.dart';
 import 'app_lifecycle.dart';
 import 'flutter_widget_lifecycle.dart';
 import 'gesture_page.dart';
+import 'image_page.dart';
 import 'lanuch_page.dart';
 import 'less_group_page.dart';
 
@@ -31,28 +32,31 @@ class _DynamicThemeState extends State<DynamicTheme> {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          appBar: AppBar(title: Text('如何创建和使用Flutter的路由与导航')),
-          body: Column(
-            children: <Widget>[
-              RaisedButton(
-                onPressed: () {
-                  setState(() {
-                    if (_brightness == Brightness.dark) {
-                      _brightness = Brightness.light;
-                    } else {
-                      _brightness = Brightness.dark;
-                    }
-                  });
-                },
-                child: Text(
-                  '切换主题abc',
-                  style: TextStyle(fontFamily: 'RubikMonoOne'),
+            appBar: AppBar(title: Text('如何创建和使用Flutter的路由与导航')),
+            body: ListView(
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        setState(() {
+                          if (_brightness == Brightness.dark) {
+                            _brightness = Brightness.light;
+                          } else {
+                            _brightness = Brightness.dark;
+                          }
+                        });
+                      },
+                      child: Text(
+                        '切换主题abc',
+                        style: TextStyle(fontFamily: 'RubikMonoOne'),
+                      ),
+                    ),
+                    RouteNavigator()
+                  ],
                 ),
-              ),
-              RouteNavigator()
-            ],
-          ),
-        ),
+              ],
+            )),
         routes: <String, WidgetBuilder>{
           'plugin': (BuildContext context) => PluginUse(),
           'less': (BuildContext context) => LessGroupPage(),
@@ -64,6 +68,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'widgetLifecycle': (BuildContext context) => WidgetLifecycle(),
           'appLifecycle': (BuildContext context) => AppLifecycle(),
           'photo': (BuildContext context) => PhotoApp(),
+          'image': (BuildContext context) => ImagePage(),
         });
   }
 }
@@ -103,6 +108,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('如何打开第三方应用？', LaunchPage(), 'launch'),
           _item('Flutter页面生命周期', WidgetLifecycle(), 'widgetLifecycle'),
           _item('Flutter应用生命周期', AppLifecycle(), 'appLifecycle'),
+          _item('图片控件', ImagePage(), 'image'),
         ],
       ),
     );
