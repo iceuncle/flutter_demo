@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-///图片控件
+///图片控件开发
 class ImagePage extends StatefulWidget {
   @override
   _ImagePageState createState() => _ImagePageState();
@@ -16,7 +16,7 @@ class _ImagePageState extends State<ImagePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample APp'),
+        title: Text('图片控件开发'),
       ),
       body: ListView(
         children: <Widget>[

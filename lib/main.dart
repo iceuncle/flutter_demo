@@ -5,6 +5,9 @@ import 'package:my_app/res_page.dart';
 import 'package:my_app/statefull_group_page.dart';
 import 'package:my_app/statefull_layout_page.dart';
 
+import 'animation_builder.dart';
+import 'animation_page.dart';
+import 'animation_widget.dart';
 import 'app_lifecycle.dart';
 import 'flutter_widget_lifecycle.dart';
 import 'gesture_page.dart';
@@ -69,6 +72,11 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'appLifecycle': (BuildContext context) => AppLifecycle(),
           'photo': (BuildContext context) => PhotoApp(),
           'image': (BuildContext context) => ImagePage(),
+          'animation': (BuildContext context) => AnimationPage(),
+          'animation widget': (BuildContext context) =>
+              AnimationWidgetPage(),
+          'animation builder': (BuildContext context) =>
+              AnimationBuilderPage(),
         });
   }
 }
@@ -108,7 +116,10 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('如何打开第三方应用？', LaunchPage(), 'launch'),
           _item('Flutter页面生命周期', WidgetLifecycle(), 'widgetLifecycle'),
           _item('Flutter应用生命周期', AppLifecycle(), 'appLifecycle'),
-          _item('图片控件', ImagePage(), 'image'),
+          _item('图片控件开发', ImagePage(), 'image'),
+          _item('动画Animation开发', AnimationPage(), 'animation'),
+          _item('AnimationWidget实现动画', AnimationWidgetPage(), 'animation widget'),
+          _item('AnimationBuilder重构动画', AnimationBuilderPage(), 'animation builder'),
         ],
       ),
     );
