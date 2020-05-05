@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/hero.dart';
 import 'package:my_app/photo_app.dart';
 import 'package:my_app/plugin_use.dart';
 import 'package:my_app/res_page.dart';
@@ -11,6 +12,7 @@ import 'animation_widget.dart';
 import 'app_lifecycle.dart';
 import 'flutter_widget_lifecycle.dart';
 import 'gesture_page.dart';
+import 'hero2.dart';
 import 'image_page.dart';
 import 'lanuch_page.dart';
 import 'less_group_page.dart';
@@ -73,10 +75,10 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'photo': (BuildContext context) => PhotoApp(),
           'image': (BuildContext context) => ImagePage(),
           'animation': (BuildContext context) => AnimationPage(),
-          'animation widget': (BuildContext context) =>
-              AnimationWidgetPage(),
-          'animation builder': (BuildContext context) =>
-              AnimationBuilderPage(),
+          'animation widget': (BuildContext context) => AnimationWidgetPage(),
+          'animation builder': (BuildContext context) => AnimationBuilderPage(),
+          'hero': (BuildContext context) => HeroAnimation(),
+          'hero2': (BuildContext context) => RadialExpansionDemo(),
         });
   }
 }
@@ -106,7 +108,6 @@ class _RouteNavigatorState extends State<RouteNavigator> {
                   byName = value;
                 });
               }),
-          _item('【实战尝鲜】拍照APP开发', PhotoApp(), 'photo'),
           _item('如何使用Flutter包和插件？', PluginUse(), 'plugin'),
           _item('StatelessWidget与基础组件', LessGroupPage(), 'less'),
           _item('StatefulWidget与基础组件', StatefulGroup(), 'ful'),
@@ -116,10 +117,15 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('如何打开第三方应用？', LaunchPage(), 'launch'),
           _item('Flutter页面生命周期', WidgetLifecycle(), 'widgetLifecycle'),
           _item('Flutter应用生命周期', AppLifecycle(), 'appLifecycle'),
+          _item('【实战尝鲜】拍照APP开发', PhotoApp(), 'photo'),
           _item('图片控件开发', ImagePage(), 'image'),
           _item('动画Animation开发', AnimationPage(), 'animation'),
-          _item('AnimationWidget实现动画', AnimationWidgetPage(), 'animation widget'),
-          _item('AnimationBuilder重构动画', AnimationBuilderPage(), 'animation builder'),
+          _item(
+              'AnimationWidget实现动画', AnimationWidgetPage(), 'animation widget'),
+          _item('AnimationBuilder重构动画', AnimationBuilderPage(),
+              'animation builder'),
+          _item('hero创建动画', HeroAnimation(), 'hero'),
+          _item('实现径向hero动画 高级', RadialExpansionDemo(), 'hero2'),
         ],
       ),
     );
