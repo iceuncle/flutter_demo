@@ -13,6 +13,7 @@ import 'app_lifecycle.dart';
 import 'flutter_widget_lifecycle.dart';
 import 'gesture_page.dart';
 import 'hero2.dart';
+import 'http_dart.dart';
 import 'image_page.dart';
 import 'lanuch_page.dart';
 import 'less_group_page.dart';
@@ -79,6 +80,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'animation builder': (BuildContext context) => AnimationBuilderPage(),
           'hero': (BuildContext context) => HeroAnimation(),
           'hero2': (BuildContext context) => RadialExpansionDemo(),
+          'Http': (BuildContext context) => HttpPage(),
         });
   }
 }
@@ -126,6 +128,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
               'animation builder'),
           _item('hero创建动画', HeroAnimation(), 'hero'),
           _item('实现径向hero动画 高级', RadialExpansionDemo(), 'hero2'),
+          _item('Http实现网络操作', HttpPage(), 'http'),
         ],
       ),
     );
