@@ -14,6 +14,7 @@ import 'app_lifecycle.dart';
 import 'expansion_tile_page.dart';
 import 'flutter_widget_lifecycle.dart';
 import 'gesture_page.dart';
+import 'gridview_page.dart';
 import 'hero2.dart';
 import 'http_builder_page.dart';
 import 'http_dart.dart';
@@ -89,6 +90,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'share preference': (BuildContext context) => SharedPreferencePage(),
           'listview': (BuildContext context) => ListViewPage(),
           'expansion tile': (BuildContext context) => ExpansionTilePage(),
+          'gridview': (BuildContext context) => GridViewPage(),
         });
   }
 }
@@ -141,6 +143,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('shared preference实现本地存储', SharedPreferencePage(), 'share preference'),
           _item('listview列表使用', ListViewPage(), 'listview'),
           _item('expansion tile实现展开列表', ExpansionTilePage(), 'expansion tile'),
+          _item('gridview网格布局使用', GridViewPage(), 'gridview'),
         ],
       ),
     );
