@@ -13,7 +13,7 @@ const CITY_NAMES = [
   '洛阳',
   '厦门',
   '青岛',
-  '拉萨'
+  '拉萨',
 ];
 
 class ListViewPage extends StatefulWidget {

@@ -11,6 +11,7 @@ import 'animation_builder.dart';
 import 'animation_page.dart';
 import 'animation_widget.dart';
 import 'app_lifecycle.dart';
+import 'expansion_tile_page.dart';
 import 'flutter_widget_lifecycle.dart';
 import 'gesture_page.dart';
 import 'hero2.dart';
@@ -87,6 +88,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'futurebuilder': (BuildContext context) => HttpBuilderPage(),
           'share preference': (BuildContext context) => SharedPreferencePage(),
           'listview': (BuildContext context) => ListViewPage(),
+          'expansion tile': (BuildContext context) => ExpansionTilePage(),
         });
   }
 }
@@ -138,6 +140,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('Future与FutureBuilder实用技巧', HttpBuilderPage(), 'futurebuilder'),
           _item('shared preference实现本地存储', SharedPreferencePage(), 'share preference'),
           _item('listview列表使用', ListViewPage(), 'listview'),
+          _item('expansion tile实现展开列表', ExpansionTilePage(), 'expansion tile'),
         ],
       ),
     );
