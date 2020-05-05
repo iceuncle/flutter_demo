@@ -19,6 +19,7 @@ import 'http_dart.dart';
 import 'image_page.dart';
 import 'lanuch_page.dart';
 import 'less_group_page.dart';
+import 'listview_page.dart';
 
 void main() => runApp(DynamicTheme());
 
@@ -85,6 +86,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'Http': (BuildContext context) => HttpPage(),
           'futurebuilder': (BuildContext context) => HttpBuilderPage(),
           'share preference': (BuildContext context) => SharedPreferencePage(),
+          'listview': (BuildContext context) => ListViewPage(),
         });
   }
 }
@@ -135,6 +137,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('Http实现网络操作', HttpPage(), 'http'),
           _item('Future与FutureBuilder实用技巧', HttpBuilderPage(), 'futurebuilder'),
           _item('shared preference实现本地存储', SharedPreferencePage(), 'share preference'),
+          _item('listview列表使用', ListViewPage(), 'listview'),
         ],
       ),
     );
