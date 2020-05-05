@@ -30,6 +30,7 @@ dependencies:
   transparent_image: ^1.0.0
   cached_network_image: ^2.1.0+1
   http: ^0.12.1
+  shared_preferences: ^0.5.7
 
 dev_dependencies:
   flutter_test:

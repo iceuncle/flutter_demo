@@ -3,6 +3,7 @@ import 'package:my_app/hero.dart';
 import 'package:my_app/photo_app.dart';
 import 'package:my_app/plugin_use.dart';
 import 'package:my_app/res_page.dart';
+import 'package:my_app/shared_preference.dart';
 import 'package:my_app/statefull_group_page.dart';
 import 'package:my_app/statefull_layout_page.dart';
 
@@ -83,6 +84,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'hero2': (BuildContext context) => RadialExpansionDemo(),
           'Http': (BuildContext context) => HttpPage(),
           'futurebuilder': (BuildContext context) => HttpBuilderPage(),
+          'share preference': (BuildContext context) => SharedPreferencePage(),
         });
   }
 }
@@ -132,6 +134,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('实现径向hero动画 高级', RadialExpansionDemo(), 'hero2'),
           _item('Http实现网络操作', HttpPage(), 'http'),
           _item('Future与FutureBuilder实用技巧', HttpBuilderPage(), 'futurebuilder'),
+          _item('shared preference实现本地存储', SharedPreferencePage(), 'share preference'),
         ],
       ),
     );
