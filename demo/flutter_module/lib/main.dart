@@ -3,8 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp(
-      initParams: window.defaultRouteName,
-    ));
+  initParams: window.defaultRouteName,
+));
 
 class MyApp extends StatelessWidget {
   final String initParams;
