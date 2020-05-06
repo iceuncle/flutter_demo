@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/hero.dart';
 import 'package:my_app/photo_app.dart';
 import 'package:my_app/plugin_use.dart';
+import 'package:my_app/refresh_indicator_page.dart';
 import 'package:my_app/res_page.dart';
 import 'package:my_app/shared_preference.dart';
 import 'package:my_app/statefull_group_page.dart';
@@ -91,6 +92,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'listview': (BuildContext context) => ListViewPage(),
           'expansion tile': (BuildContext context) => ExpansionTilePage(),
           'gridview': (BuildContext context) => GridViewPage(),
+          'refresh indicator': (BuildContext context) => RefreshIndicatorPage(),
         });
   }
 }
@@ -140,10 +142,12 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('实现径向hero动画 高级', RadialExpansionDemo(), 'hero2'),
           _item('Http实现网络操作', HttpPage(), 'http'),
           _item('Future与FutureBuilder实用技巧', HttpBuilderPage(), 'futurebuilder'),
-          _item('shared preference实现本地存储', SharedPreferencePage(), 'share preference'),
+          _item('shared preference实现本地存储', SharedPreferencePage(),
+              'share preference'),
           _item('listview列表使用', ListViewPage(), 'listview'),
           _item('expansion tile实现展开列表', ExpansionTilePage(), 'expansion tile'),
           _item('gridview网格布局使用', GridViewPage(), 'gridview'),
+          _item('高级功能列表下拉刷新与上拉加载更多功能实现', RefreshIndicatorPage(), 'refresh indicator'),
         ],
       ),
     );
