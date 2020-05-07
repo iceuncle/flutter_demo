@@ -9,6 +9,7 @@ import 'package:my_app/statefull_group_page.dart';
 import 'package:my_app/statefull_layout_page.dart';
 import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 
+import 'S.dart';
 import 'animation_builder.dart';
 import 'animation_page.dart';
 import 'animation_widget.dart';
@@ -39,6 +40,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
   void initState() {
 //    hideScreen();
     FlutterSplashScreen.hide();
+    S.init();
     super.initState();
   }
 

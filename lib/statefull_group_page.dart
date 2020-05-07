@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'S.dart';
+
 void main() => runApp(StatefulGroup());
 
 ///StatefulWidget与基础组件
@@ -13,7 +15,7 @@ class _StatefulGroupState extends State<StatefulGroup> {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle textStyle = TextStyle(fontSize: 20);
+    TextStyle textStyle = TextStyle(fontSize: S.px(20));
     return MaterialApp(
       title: 'StatefulWidget与基础组件',
       theme: ThemeData(
@@ -73,18 +75,19 @@ class _StatefulGroupState extends State<StatefulGroup> {
                         children: <Widget>[
                           Image.network(
                             'http://www.devio.org/img/avatar.png',
-                            width: 100,
-                            height: 100,
+                            width: S.px(360),
+                            height: S.px(360),
+                            fit: BoxFit.fill,
                           ),
                           TextField(
                             decoration: InputDecoration(
-                                contentPadding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                                contentPadding: EdgeInsets.fromLTRB(S.px(5), 0, 0, 0),
                                 hintText: '请输入',
-                                hintStyle: TextStyle(fontSize: 15)),
+                                hintStyle: TextStyle(fontSize: S.px(15))),
                           ),
                           Container(
-                            height: 100,
-                            margin: EdgeInsets.only(top: 10),
+                            height: S.px(100),
+                            margin: EdgeInsets.only(top: S.px(10)),
                             decoration:
                                 BoxDecoration(color: Colors.lightBlueAccent),
                             child: PageView(
@@ -115,7 +118,7 @@ class _StatefulGroupState extends State<StatefulGroup> {
     return Container(
       alignment: Alignment.center,
       decoration: BoxDecoration(color: color),
-      child: Text(title, style: TextStyle(fontSize: 22, color: Colors.white)),
+      child: Text(title, style: TextStyle(fontSize: S.px(22), color: Colors.white)),
     );
   }
 }
