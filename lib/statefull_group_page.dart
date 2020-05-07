@@ -65,45 +65,63 @@ class _StatefulGroupState extends State<StatefulGroup> {
           child: Text('点我'),
         ),
         body: _currentIndex == 0
-            ? RefreshIndicator(
-                child: ListView(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(color: Colors.white),
-                      alignment: Alignment.center,
-                      child: Column(
-                        children: <Widget>[
-                          Image.network(
-                            'http://www.devio.org/img/avatar.png',
-                            width: S.px(360),
-                            height: S.px(360),
-                            fit: BoxFit.fill,
+            ? Column(
+                children: <Widget>[
+                  Flexible(
+                    child: ListView(
+                      children: <Widget>[
+                        Image.network(
+                          'http://www.devio.org/img/avatar.png',
+                          width: S.px(360),
+                          height: S.px(360),
+                          fit: BoxFit.fill,
+                        ),
+                        TextField(
+                          decoration: InputDecoration(
+                              contentPadding:
+                                  EdgeInsets.fromLTRB(S.px(5), 0, 0, 0),
+                              hintText: '请输入',
+                              hintStyle: TextStyle(fontSize: S.px(15))),
+                        ),
+                        Container(
+                          height: S.px(100),
+                          margin: EdgeInsets.only(top: S.px(10)),
+                          decoration:
+                              BoxDecoration(color: Colors.lightBlueAccent),
+                          child: PageView(
+                            children: <Widget>[
+                              _item('Page1', Colors.deepPurple),
+                              _item('Page2', Colors.green),
+                              _item('Page3', Colors.red),
+                            ],
                           ),
-                          TextField(
-                            decoration: InputDecoration(
-                                contentPadding: EdgeInsets.fromLTRB(S.px(5), 0, 0, 0),
-                                hintText: '请输入',
-                                hintStyle: TextStyle(fontSize: S.px(15))),
-                          ),
-                          Container(
-                            height: S.px(100),
-                            margin: EdgeInsets.only(top: S.px(10)),
-                            decoration:
-                                BoxDecoration(color: Colors.lightBlueAccent),
-                            child: PageView(
-                              children: <Widget>[
-                                _item('Page1', Colors.deepPurple),
-                                _item('Page2', Colors.green),
-                                _item('Page3', Colors.red),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                onRefresh: _handleRefresh)
+                  ),
+                  Container(
+                    height: 50,
+                    child: Row(
+                      children: <Widget>[
+                        Flexible(
+                          child: TextField(
+                            decoration: InputDecoration(
+                                contentPadding: EdgeInsets.only(left: 5),
+                                hintText: '发送消息',
+                                hintStyle: TextStyle(fontSize: S.px(12))),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 4),
+                          child: IconButton(
+                              icon: Icon(Icons.send, color: Colors.blue),
+                              onPressed: null),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              )
             : Text('列表'),
       ),
     );
@@ -118,7 +136,8 @@ class _StatefulGroupState extends State<StatefulGroup> {
     return Container(
       alignment: Alignment.center,
       decoration: BoxDecoration(color: color),
-      child: Text(title, style: TextStyle(fontSize: S.px(22), color: Colors.white)),
+      child: Text(title,
+          style: TextStyle(fontSize: S.px(22), color: Colors.white)),
     );
   }
 }

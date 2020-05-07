@@ -38,8 +38,8 @@ class _DynamicThemeState extends State<DynamicTheme> {
 
   @override
   void initState() {
-//    hideScreen();
-    FlutterSplashScreen.hide();
+    hideScreen();
+//    FlutterSplashScreen.hide();
     S.init();
     super.initState();
   }
