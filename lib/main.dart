@@ -7,6 +7,7 @@ import 'package:my_app/res_page.dart';
 import 'package:my_app/shared_preference.dart';
 import 'package:my_app/statefull_group_page.dart';
 import 'package:my_app/statefull_layout_page.dart';
+import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 
 import 'animation_builder.dart';
 import 'animation_page.dart';
@@ -33,6 +34,19 @@ class DynamicTheme extends StatefulWidget {
 
 class _DynamicThemeState extends State<DynamicTheme> {
   Brightness _brightness = Brightness.light;
+
+  @override
+  void initState() {
+//    hideScreen();
+    FlutterSplashScreen.hide();
+    super.initState();
+  }
+
+  Future<void> hideScreen() async {
+    Future.delayed(Duration(milliseconds: 2000), () {
+      FlutterSplashScreen.hide();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -147,7 +161,8 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('listview列表使用', ListViewPage(), 'listview'),
           _item('expansion tile实现展开列表', ExpansionTilePage(), 'expansion tile'),
           _item('gridview网格布局使用', GridViewPage(), 'gridview'),
-          _item('高级功能列表下拉刷新与上拉加载更多功能实现', RefreshIndicatorPage(), 'refresh indicator'),
+          _item('高级功能列表下拉刷新与上拉加载更多功能实现', RefreshIndicatorPage(),
+              'refresh indicator'),
         ],
       ),
     );
