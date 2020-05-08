@@ -1,6 +1,6 @@
 # flutter_demo
 
-flutter学习记录
+flutter学习实践
 
 ## 提交记录
 
@@ -28,3 +28,5 @@ flutter学习记录
 22. android启动白屏问题解决
 23. ios启动白屏问题解决
 24. 屏幕适配
+25. 实现聊天输入框,软件盘顶上布局效果
+26. 实现滑动悬停tabBar效果
