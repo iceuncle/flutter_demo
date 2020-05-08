@@ -19,6 +19,7 @@ import 'flutter_widget_lifecycle.dart';
 import 'gesture_page.dart';
 import 'gridview_page.dart';
 import 'hero2.dart';
+import 'hover_scrollview_page.dart';
 import 'http_builder_page.dart';
 import 'http_dart.dart';
 import 'image_page.dart';
@@ -109,6 +110,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
           'expansion tile': (BuildContext context) => ExpansionTilePage(),
           'gridview': (BuildContext context) => GridViewPage(),
           'refresh indicator': (BuildContext context) => RefreshIndicatorPage(),
+          'hover scrollview': (BuildContext context) => HoverScrollViewPage(),
         });
   }
 }
@@ -165,6 +167,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('gridview网格布局使用', GridViewPage(), 'gridview'),
           _item('高级功能列表下拉刷新与上拉加载更多功能实现', RefreshIndicatorPage(),
               'refresh indicator'),
+          _item('滑动悬停tabBar效果', HoverScrollViewPage(), 'hover scrollview'),
         ],
       ),
     );
