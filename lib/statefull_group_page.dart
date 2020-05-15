@@ -67,15 +67,15 @@ class _StatefulGroupState extends State<StatefulGroup> {
         body: _currentIndex == 0
             ? Column(
                 children: <Widget>[
-                  Flexible(
-                    child: ListView(
-                      children: <Widget>[
-                        Image.network(
-                          'http://www.devio.org/img/avatar.png',
+                  Image.network(
+                    'http://www.devio.org/img/avatar.png',
                           width: S.px(360),
                           height: S.px(360),
                           fit: BoxFit.fill,
-                        ),
+                  ),
+                  Flexible(
+                    child: ListView(
+                      children: <Widget>[
                         TextField(
                           decoration: InputDecoration(
                               contentPadding:
