@@ -15,7 +15,7 @@ class _StatefulGroupState extends State<StatefulGroup> {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle textStyle = TextStyle(fontSize: S.px(20));
+    TextStyle textStyle = TextStyle(fontSize: S.dp(20));
     return MaterialApp(
       title: 'StatefulWidget与基础组件',
       theme: ThemeData(
@@ -69,8 +69,8 @@ class _StatefulGroupState extends State<StatefulGroup> {
                 children: <Widget>[
                   Image.network(
                     'http://www.devio.org/img/avatar.png',
-                          width: S.px(360),
-                          height: S.px(360),
+                          width: S.dp(360),
+                          height: S.dp(360),
                           fit: BoxFit.fill,
                   ),
                   Flexible(
@@ -79,13 +79,13 @@ class _StatefulGroupState extends State<StatefulGroup> {
                         TextField(
                           decoration: InputDecoration(
                               contentPadding:
-                                  EdgeInsets.fromLTRB(S.px(5), 0, 0, 0),
+                                  EdgeInsets.fromLTRB(S.dp(5), 0, 0, 0),
                               hintText: '请输入',
-                              hintStyle: TextStyle(fontSize: S.px(15))),
+                              hintStyle: TextStyle(fontSize: S.dp(15))),
                         ),
                         Container(
-                          height: S.px(100),
-                          margin: EdgeInsets.only(top: S.px(10)),
+                          height: S.dp(100),
+                          margin: EdgeInsets.only(top: S.dp(10)),
                           decoration:
                               BoxDecoration(color: Colors.lightBlueAccent),
                           child: PageView(
@@ -108,7 +108,7 @@ class _StatefulGroupState extends State<StatefulGroup> {
                             decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(left: 5),
                                 hintText: '发送消息',
-                                hintStyle: TextStyle(fontSize: S.px(12))),
+                                hintStyle: TextStyle(fontSize: S.dp(12))),
                           ),
                         ),
                         Container(
@@ -137,7 +137,7 @@ class _StatefulGroupState extends State<StatefulGroup> {
       alignment: Alignment.center,
       decoration: BoxDecoration(color: color),
       child: Text(title,
-          style: TextStyle(fontSize: S.px(22), color: Colors.white)),
+          style: TextStyle(fontSize: S.dp(22), color: Colors.white)),
     );
   }
 }
