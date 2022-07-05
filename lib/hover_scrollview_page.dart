@@ -36,7 +36,7 @@ class _HoverScrollViewPageState extends State<HoverScrollViewPage>
                 SliverOverlapAbsorber(
                   handle: NestedScrollView.sliverOverlapAbsorberHandleFor(
                       context),
-                  child: SliverAppBar(
+                  sliver: SliverAppBar(
                     titleSpacing: 0,
                     backgroundColor: Colors.white,
                     leading: null,

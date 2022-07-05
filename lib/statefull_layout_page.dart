@@ -46,7 +46,7 @@ class _FlutterLayoutGroupState extends State<FlutterLayoutGroup> {
                     Icons.home,
                     color: Colors.blue,
                   ),
-                  title: Text('首页')),
+                  label: '首页'),
               BottomNavigationBarItem(
                   icon: Icon(
                     Icons.home,
@@ -56,7 +56,7 @@ class _FlutterLayoutGroupState extends State<FlutterLayoutGroup> {
                     Icons.home,
                     color: Colors.blue,
                   ),
-                  title: Text('列表'))
+                  label: '列表')
             ]),
         floatingActionButton: FloatingActionButton(
           onPressed: null,

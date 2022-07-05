@@ -43,7 +43,7 @@ class _PluginUseState extends State<PluginUse> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.displayLarge,
             ),
           ],
         ),
